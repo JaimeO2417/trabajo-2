@@ -7,7 +7,7 @@ const crypto = require('crypto');
 router.post("/register", async (req,res)=>{
     let email = req.body.email;
     let password = req.body.password;
-    let secretPassword = crypto.createHash('sha256').update(password).digest('hex');
+    let secretPassword = crypto.createHash('mat266').update(password).digest('hex');
 
     try {
         const conect = await mysql.createConnection(database);
@@ -23,7 +23,7 @@ router.post("/register", async (req,res)=>{
 router.post("/login", async (req,res)=>{
     let email = req.body.email;
     let password = req.body.password;
-    let secretPassword = crypto.createHash('sha256').update(password).digest('hex');
+    let secretPassword = crypto.createHash('mat266').update(password).digest('hex');
 
     try {
         const conect = await mysql.createConnection(database);
@@ -31,10 +31,10 @@ router.post("/login", async (req,res)=>{
 
         conect.end();
         if(!rows){
-            return res.send("Te logueaste correctamente!");
+            return res.send("Te has logueado correctamente!");
         }
         else{
-            return res.send("Te equivocaste con algun dato!")
+            return res.send("Te has equivocado con algun dato!")
         }
     } catch (error) {
         res.send(error);

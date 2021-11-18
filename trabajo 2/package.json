@@ -1,7 +1,7 @@
 {
-    "name": "t2-mascots",
+    "name": "mascotast2a",
     "version": "1.0.0",
-    "description": "Api Mascots",
+    "description": "Api mascotas T2A",
     "main": "app.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
